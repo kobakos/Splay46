@@ -3,10 +3,10 @@
 
 I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this guide.
 ## Get all the parts you'll need
-- PCB(gerbers in this repository. Hot-swappable version(only MX series) and )
-- Components(check the BOM(digikey)). Switch sockets are not included in the BOM so if you are working with a hot-swappable pcb, don't forget to buy it.
+- PCB(gerbers in this repository. Hot-swappable version(only MX series) and ALPS compatible version(non hot-swappable))
+- Components(check the BOM(digikey)).
 - Case(dxf is in this repository)
-- Plate(dxf is in this repository)
+- Plate(dxf is in this repository. MX and ALPS)
 - Gaskets
 - M2 screws
 - M2 spacers (length depends on the mid layer thickness)
@@ -31,10 +31,10 @@ I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this 
 | MX1-23           | Kailh MX switch socket(optional) | -                         | 
 ### Getting the case
 This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). If you are thinking of ordering the acrylics to elecrow, it will be costly to do so, so instead you can set all layer's thickness as 3mm.
-###Spacer size
+### Spacer size
 The hex hole on the mid layer is a hexagon that circumscribes with a circle with 4.2mm radius, and the hole on the top/bottom layer is a circle with 2.2mm radius.
-###gesket thickness
-Thickness of the gaskets depends on the mid-hi layer's thickness. If you use 2.5mm plate and 3.0mm plate for the mid-hi 
+### gasket thickness
+Thickness of the gaskets depends on the mid-hi layer's thickness. If you are using 2.5mm plate and 3.0mm plate for the mid-hi layer with a 1.5mm thick plate, the gasket thickness would be 2mm.
 ## Soldering the components onto the pcb(except the switches)
 Place the components below to its corresponding silks and solder them. The placement of the MCU and the diode have to be done carefully accroding to the picture below. The rest of it doesn't care about placement angle as long as it matches the footprint. Check out some SMD soldering tutorials on youtube if you are worried about soldering these components.
 Check if there are no soldering defects, and plug it in to the pc to see if the pcb is working properly.
