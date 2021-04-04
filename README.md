@@ -1,27 +1,46 @@
-# [ag_kari] Build Guide
+# [ag_kari]
 ***This keyboard requires soldering of really small smd components like USB Type C Receptacle(0.3mm pitch), Atmega32U4(0.8mm pitch), 0603(1608 in metric) sized capacitors/resistors, thus only recommended for experts.***
+
+I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this guide.
 ## Get all the parts you'll need
 - PCB(gerbers in this repository. Hot-swappable version(only MX series) and )
-- Components(check the BOM). Switch sockets are not included in the BOM so if you are working on the hot-swappable pcb, don't forget to buy it.
+- Components(check the BOM(digikey)). Switch sockets are not included in the BOM so if you are working with a hot-swappable pcb, don't forget to buy it.
 - Case(dxf is in this repository)
 - Plate(dxf is in this repository)
 - Gaskets
 - M2 screws
-- M2 spacers
+- M2 spacers (length depends on the mid layer thickness)
 - M6 nuts
 - M6 bolts
-- soldering kit(Using flux is strongly recommended)
+
+| Annotation(Silk) | Component                        | digikey                   | 
+| ---------------- | -------------------------------- | ------------------------- | 
+| C1               | 10uf capacitor                   | 1276-1119-1-ND            | 
+| C2,5,6           | 0.1uf capacitor                  | 1276-CL10B104KB8NNNLCT-ND | 
+| C3,4             | 22pf capacitor                   | 478-1167-1-ND             | 
+| C7               | 1uf capacitor                    | 276-1102-1-ND             | 
+| R1,2             | 22ohm resistor                   | 311-22.0HRCT-ND           | 
+| R3,4             | 10kohm resistor                  | 311-10KDCT-ND             | 
+| R5,6             | 5.1kohm resistor                 | 311-5.10KHRCT-ND          | 
+| Y1               | 16.0Mhz crystal                  | SER4069CT-ND              | 
+| U1               | Atmega32U4                       | ATMEGA32U4-AURCT-ND       | 
+| SW1              | Tactile switch                   | CKN10361CT-ND             | 
+| D1-23            | smd Diode                        | BAV16W-FDICT-ND           | 
+| J1               | USB type-c receptacle            | 2073-USB4105-GF-ACT-ND    | 
+| J2               | TRRS jack                        | CP-3502SJCT-ND            | 
+| MX1-23           | Kailh MX switch socket(optional) | -                         | 
 ### Getting the case
-This case was intended to stack like the image below, but it'll take a lot of cost to do so,
+This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). If you are thinking of ordering the acrylics to elecrow, it will be costly to do so, so instead you can set all layer's thickness as 3mm.
+###Spacer size
+The hex hole on the mid layer is a hexagon that circumscribes with a circle with 4.2mm radius, and the hole on the top/bottom layer is a circle with 2.2mm radius.
+###gesket thickness
+Thickness of the gaskets depends on the mid-hi layer's thickness. If you use 2.5mm plate and 3.0mm plate for the mid-hi 
 ## Soldering the components onto the pcb(except the switches)
 Place the components below to its corresponding silks and solder them. The placement of the MCU and the diode have to be done carefully accroding to the picture below. The rest of it doesn't care about placement angle as long as it matches the footprint. Check out some SMD soldering tutorials on youtube if you are worried about soldering these components.
-Check if the pcb is working after soldering the components by plugging it in to the pc.
-### Trouble shooting
-- Check if there are no solder joints using a loupe, especially within the MCU and the USB connector's legs.
-- Sometimes SMD component is not soldered to the pads even though if it looks like it is.
-- Check if the crystal is soldered properly.
-- If the soldering looks perfect and the pc won't recognize the board, it can be a problem about the MCU's firmware. Flash a new firmware to it by ISP flashing.
+Check if there are no soldering defects, and plug it in to the pc to see if the pcb is working properly.
 ## Placing the switches
-Insert the switches to the plate, then solder(or just insert, if you are working on hot-swappable version) them to the pcb.
+Insert the switches to the plate, then solder(or just insert, if you are working on a hot-swappable pcb) them to the pcb.
 ## Assembling the case
-Stick the gaskets onto the plate. Stack the acrylics like this and place the plate and pcb on top of it. Place the rest of the acrylics and adjust the placement, then screw them.
+Stick the gaskets to the plate. First, stack the first three layer (bottom and mid-low) and place the plate and pcb on top of it. Place the rest of the plates, adjust the placement, then screw them.
+## Flashing the firmware
+DOwnload the firmware in this repository and move the folder undre QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make [keyboard_name]:default:dfu-split-left```.
