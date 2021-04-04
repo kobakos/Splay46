@@ -1,4 +1,4 @@
-# [ag_kari]
+# [Galois 46]
 ***This keyboard requires soldering of really small smd components like USB Type C Receptacle(0.3mm pitch), Atmega32U4(0.8mm pitch), 0603(1608 in metric) sized capacitors/resistors, thus only recommended for experts.***
 
 I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this guide.
@@ -25,16 +25,16 @@ I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this 
 | Y1               | 16.0Mhz crystal                  | SER4069CT-ND              | 
 | U1               | Atmega32U4                       | ATMEGA32U4-AURCT-ND       | 
 | SW1              | Tactile switch                   | CKN10361CT-ND             | 
-| D1-23            | smd Diode                        | BAV16W-FDICT-ND           | 
+| D1-23            | smd Diode                        | SMMSD4148T1GOSCT-ND       | 
 | J1               | USB type-c receptacle            | 2073-USB4105-GF-ACT-ND    | 
 | J2               | TRRS jack                        | CP-3502SJCT-ND            | 
 | MX1-23           | Kailh MX switch socket(optional) | -                         | 
 ### Getting the case
-This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). If you are thinking of ordering the acrylics to elecrow, it will be costly to do so, so instead you can set all layer's thickness as 3mm.
+This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). If you are thinking of ordering the acrylics to elecrow, it will be costly to do so with these layer thicknesses, so instead you can set all layer's thickness as 3mm.
 ### Spacer size
 The hex hole on the mid layer is a hexagon that circumscribes with a circle with 4.2mm radius, and the hole on the top/bottom layer is a circle with 2.2mm radius.
 ### gasket thickness
-Thickness of the gaskets depends on the mid-hi layer's thickness. If you are using 2.5mm plate and 3.0mm plate for the mid-hi layer with a 1.5mm thick plate, the gasket thickness would be 2mm.
+Thickness of the gaskets depends on the mid-hi layer's thickness. If you are using 2.5mm plate and 3.0mm plate for the mid-hi layer with a 1.5mm thick plate, the gasket thickness would be 2mm. Tipically, (gasket thickness) = ((mid-hi layer thickness) - (plate thickness)) /2
 ## Soldering the components onto the pcb(except the switches)
 Place the components below to its corresponding silks and solder them. The placement of the MCU and the diode have to be done carefully accroding to the picture below. The rest of it doesn't care about placement angle as long as it matches the footprint. Check out some SMD soldering tutorials on youtube if you are worried about soldering these components.
 Check if there are no soldering defects, and plug it in to the pc to see if the pcb is working properly.
@@ -43,4 +43,4 @@ Insert the switches to the plate, then solder(or just insert, if you are working
 ## Assembling the case
 Stick the gaskets to the plate. First, stack the first three layer (bottom and mid-low) and place the plate and pcb on top of it. Place the rest of the plates, adjust the placement, then screw them.
 ## Flashing the firmware
-DOwnload the firmware in this repository and move the folder undre QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make [keyboard_name]:default:dfu-split-left```.
+Download the firmware in this repository and move it under QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make Galois46:default:dfu-split-left```.
