@@ -10,8 +10,8 @@ I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this 
 - Gaskets *20
 - M2 screws *28
 - M2 spacers (length depends on the mid layer thickness) *14
-- M6 nuts *8
-- M6 bolts *16
+- M6 nuts *8 (for tenting/tilting)
+- M6 bolts *16 (for tenting/tilting)
 - keyswitches * 46
 ### BOM
 
