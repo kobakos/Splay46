@@ -4,9 +4,9 @@
 I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this guide.
 ## Getting all the parts you'll need
 - PCB(gerbers are in this repository. Hot-swappable version(only MX series) and ALPS compatible version(non hot-swappable) is available.)
-- Components(check the BOM(digikey)).
+- Components(check the BOM).
 - Case(dxf is in this repository)
-- Plate(dxf is in this repository. MX and ALPS)
+- Plate(dxf is in this repository. MX or ALPS)
 - Gaskets *20
 - M2 screws *28
 - M2 spacers (length depends on the mid layer thickness) *14
