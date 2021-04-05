@@ -1,4 +1,6 @@
-# Splay46 build guide
+# Splay46
+![KBD_IMAGE](/readme_imgs/kbd_pic.jpeg)
+## Build guide
 ***This keyboard requires soldering of really small smd components like USB Type C Receptacle(0.3mm pitch), Atmega32U4(0.8mm pitch), 0603(1608 in metric) sized capacitors/resistors, thus only recommended for experts.***
 
 ![Layers](/readme_imgs/layer_zusi.png)
