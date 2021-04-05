@@ -1,7 +1,7 @@
 # Splay46 build guide
 ***This keyboard requires soldering of really small smd components like USB Type C Receptacle(0.3mm pitch), Atmega32U4(0.8mm pitch), 0603(1608 in metric) sized capacitors/resistors, thus only recommended for experts.***
 
-I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this guide.
+![Layers](../readme_imgs/layer_zusi.png "I will refer to the layers of the cases as bottom, mid-low, mid-hi, top from the bottom.")
 ## Getting all the parts you'll need
 - PCB(gerbers are in this repository. Hot-swappable version(only MX series) and ALPS compatible version(non hot-swappable) is available.)
 - Components(check the BOM).
