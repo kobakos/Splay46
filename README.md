@@ -29,7 +29,7 @@ I will refer to the layers of the cases as bottom, mid-low, mid-hi, top in this 
 | SW1              | Tactile switch                   | CKN10361CT-ND             | 
 | D1-23            | smd Diode                        | SMMSD4148T1GOSCT-ND       | 
 | J1               | USB type-c receptacle            | 2073-USB4105-GF-ACT-ND    | 
-| J2               | TRRS jack                        | CP-3502SJCT-ND            | 
+| J2               | TRS jack                         | CP-3502SJCT-ND            | 
 | MX1-23           | Kailh MX switch socket(optional) | -                         | 
 ### Getting the case
 This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). But if you are thinking of ordering the acrylics to elecrow, it will be costly to do so with these layer thicknesses, so instead you can set all layer's thickness as 3mm. You can use the whole_3030.dxf in that case.
