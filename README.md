@@ -15,6 +15,7 @@
 - M2 spacers (length depends on the mid layer thickness) *14
 - M6 nuts *8 (for tenting/tilting)
 - M6 bolts *16 (for tenting/tilting)
+- rubber feets *some
 - keyswitches * 46
 ### BOM
 
