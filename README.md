@@ -43,4 +43,4 @@ Insert the switches to the plate, then solder(or just insert, if you are working
 ## Assembling the case
 Stick the gaskets to the plate. First, stack the first three layer (bottom and mid-low) and place the plate and pcb on top of it. Place the rest of the plates, adjust the placement, then screw them.
 ## Flashing the firmware
-Download the firmware in this repository and move it under QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make Splay46:default:dfu-split-left```.
+Download the firmware in this repository and move it under QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make splay46:default:dfu-split-left```.
