@@ -1,7 +1,8 @@
 # Splay46 build guide
 ***This keyboard requires soldering of really small smd components like USB Type C Receptacle(0.3mm pitch), Atmega32U4(0.8mm pitch), 0603(1608 in metric) sized capacitors/resistors, thus only recommended for experts.***
 
-![Layers](../readme_imgs/layer_zusi.png "I will refer to the layers of the cases as bottom, mid-low, mid-hi, top from the bottom.")
+![Layers](/readme_imgs/layer_zusi.png)
+ I will refer to these four sections of the case as bottom, mid-low , mid-hi, top, from bottom to top.
 ## Getting all the parts you'll need
 - PCB(gerbers are in this repository. Hot-swappable version(only MX series) and ALPS compatible version(non hot-swappable) is available.)
 - Components(check the BOM).
@@ -35,7 +36,7 @@
 This case was made to be stacked with 2, 3, 3, 3, 2.5, 3, 3 mm thick acryilc plate(from bottom to top). But if you are thinking of ordering the acrylics to elecrow, it will be costly to do so with these layer thicknesses, so instead you can set all layer's thickness as 3mm. You can use the whole_3030.dxf in that case.
 ### Spacer size/ length
 The hex hole on the mid layer is a hexagon that circumscribes with a circle with 4.2mm radius, and the hole on the top/bottom layer is a circle with 2.2mm radius.
-Spacer length should be the same as the thickness of the mid layer.
+Spacer length should be the same as the thickness of the mid-hi layer + mid-low layer.
 ### Gasket thickness
 Thickness of the gaskets depends on the mid-hi layer's thickness. If you are using 2.5mm plate and 3.0mm plate for the mid-hi layer with a 1.5mm thick plate, the gasket thickness would be 2mm. Generally, (gasket thickness) = ((mid-hi layer thickness) - (plate thickness)) /2
 ## Soldering the components onto the pcb(except the switches)
@@ -46,4 +47,4 @@ Insert the switches to the plate, then solder(or just insert, if you are working
 ## Flashing the firmware
 Download the firmware in this repository and move it under QMK's keyboards folder. Check https://beta.docs.qmk.fm/using-qmk/guides/flashing/flashing how to flash. This keybaord use DFU as bootloader and EEPROM to define the handedness so for example if you are flashing the default firmware with the left hand side connected to the pc, you can do that by running ```make splay46:default:dfu-split-left```.
 ## Assembling the case
-Stick the gaskets to the plate. First, stack the first three layer (bottom and mid-low) and place the plate and pcb on top of it. Place rest of the acrylics, adjust the placement, then screw them.
+Stick the gaskets to the plate. Stack the first three layer (bottom and mid-low), place the plate and pcb on top of it. Place rest of the acrylics, adjust the placement, then screw them.
